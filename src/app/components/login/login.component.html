@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <div class="logo">
+        <img src="../../../assets/dog-and-cat-icon.png" alt="pet logo">
+    </div>
+    <div class="text-center mt-4 name">
+        Id Pet
+    </div>
+    <form  class="p-3 mt-3" (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="email" name="Email" id="userName" placeholder="Email"  ngModel/>
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Password" ngModel/>
+        </div>
+        <button class="btn mt-3" value="Login" >Login</button>
+        
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forgot password?</a>
+    </div>
+</div>
