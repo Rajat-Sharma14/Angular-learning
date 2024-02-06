@@ -4,7 +4,6 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/user.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 const routes: Routes = [
   {

@@ -1,12 +1,16 @@
 <div class="body">
-  <div id="viewport"><app-sidebar></app-sidebar></div>
+  <div id="viewport">
+    <app-sidebar></app-sidebar>
+  </div>
   <div id="content">
     <div class="card">
       <div class="title">
         <h3>User list</h3>
       </div>
       <div>
-        <button class="add-btn" (click)="openAddDialog()">Add User<i class="fa-solid fa-user-plus"></i></button>
+        <button class="add-btn" (click)="openAddDialog()">
+          Add User<i class="fa-solid fa-user-plus"></i>
+        </button>
       </div>
 
       <table style="width: 100%">
@@ -25,10 +29,16 @@
           <td>{{ user.whatsapp }}</td>
           <td>{{ user.email }}</td>
           <td>
-            <a (click)="openEditDialog(user)"><i class="fas fa-user-edit"></i></a>
+            <a (click)="openEditDialog(user._id)"
+              ><i class="fas fa-user-edit"></i
+            ></a>
           </td>
         </tr>
       </table>
+    </div>
+    <div class="button-container">
+      <button class="prevbtn">prev</button>
+      <button class="nextbtn">Next</button>
     </div>
   </div>
 </div>

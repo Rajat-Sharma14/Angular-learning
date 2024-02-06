@@ -1,43 +1,59 @@
 <div class="dialog">
-    <h3> Add User </h3>
-      <div class="input">
-        OwnerName:
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter First Name"
-        />
-      </div>
-      <div class="input">
-        OwnerSurname:
-        <input
-          type="text"
-          name="surname"
-          placeholder="Enter Last Name"
-        />
-      </div>
-      <div class="input">
-        ContactPhone:
-        <input
-          type="text"
-          name="contactphone"
-          placeholder="Enter Your Number"
-          
-        />
-      </div>
-      <div class="input">
-        whatsApp:
-        <input
-          type="text"
-          name="whatsapp"
-          placeholder="Enter Your WhatsApp Number"
-        />
-      </div>
-      <div class="input">
-        Email:
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter Your Email"
-        />
-      </div>
+  <form (ngSubmit)="addUser(myForm)" #myForm="ngForm">
+    <h3>{{ title }}</h3>
+    <div class="input">
+      OwnerName:
+      <input
+        type="text"
+        [(ngModel)]="user.ownername"
+        name="name"
+        placeholder="Enter First Name"
+      />
+    </div>
+    <div class="input">
+      OwnerSurname:
+      <input
+        type="text"
+        [(ngModel)]="user.ownersurname"
+        name="surname"
+        placeholder="Enter Last Name"
+      />
+    </div>
+    <div class="input">
+      ContactPhone:
+      <input
+        type="text"
+        [(ngModel)]="user.contactphone"
+        name="contactphone"
+        placeholder="Enter Your Number"
+      />
+    </div>
+    <div class="input">
+      whatsApp:
+      <input
+        type="text"
+        [(ngModel)]="user.whatsapp"
+        name="whatsapp"
+        placeholder="Enter Your WhatsApp Number"
+      />
+    </div>
+    <div class="input">
+      Email:
+      <input
+        type="email"
+        [(ngModel)]="user.email"
+        name="email"
+        placeholder="Enter Your Email"
+      />
+    </div>
+  </form>
+  <span>
+    <button class="btn1" *ngIf="data?._id" (click)="updateUser(myForm)">
+      Next
+    </button>
+    <button class="btn1" *ngIf="!data?._id" (click)="addUser(myForm)">
+      Add
+    </button>
+    <button class="btn2" (click)="closeDialog()">Cancel</button>
+  </span>
+</div>
